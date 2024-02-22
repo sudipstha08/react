@@ -1,5 +1,10 @@
 import { FC } from 'react'
-import { ReactPDF, ReactPdfHook, useUndoableState } from '../../components'
+import {
+  HTMLToPDF,
+  ReactPDF,
+  ReactPdfHook,
+  useUndoableState,
+} from '../../components'
 
 interface IProps {
   data?: any
@@ -20,6 +25,7 @@ const HomePage: FC<IProps> = () => {
 
   const canUndo = docStateIndex > 0
   const canRedo = docStateIndex < docStateLastIndex
+
   return (
     <>
       <div style={{ display: 'block' }}>
@@ -50,6 +56,7 @@ const HomePage: FC<IProps> = () => {
 
       <ReactPDF />
       <ReactPdfHook />
+      <HTMLToPDF />
     </>
   )
 }
