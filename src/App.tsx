@@ -1,8 +1,7 @@
-import React from 'react'
 import { Router, Switch, Route } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import HomePage from './containers/HomePage'
+import {HomePage} from './containers'
 import './App.css'
 
 const queryClient = new QueryClient()

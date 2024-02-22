@@ -49,4 +49,4 @@ const HomePage: FC<IProps> = () => {
   )
 }
 
-export default HomePage
+export  {HomePage}
