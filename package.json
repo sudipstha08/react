@@ -2,6 +2,33 @@
   "name": "react_app",
   "version": "0.1.0",
   "private": true,
+  
+  "scripts": {
+    "start-dev": "react-scripts start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint './src/**/*.{ts,tsx}' --fix",
+    "postformat": "prettier . --write",
+    "typecheck": "tsc-files --noEmit",
+    "format": "eslint -c .eslintrc.js --ignore-path .eslintignore --fix",
+    "fix": "yarn lint:ts --fix",
+    "lint-staged": "lint-staged"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "dependencies": {
     "@react-pdf/renderer": "^3.3.8",
     "@testing-library/react": "^14.2.1",
@@ -23,35 +50,6 @@
     "typescript": "^5.3.3",
     "web-vitals": "^1.0.1"
   },
-  "scripts": {
-    "start-dev": "react-scripts start",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint './src/**/*.{ts,tsx}'",
-    "lint:fix": "eslint './src/**/*.{ts,tsx}' --fix",
-    "postformat": "prettier . --write",
-    "typecheck": "tsc-files --noEmit"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
@@ -63,16 +61,22 @@
     "eslint-plugin-import": "^2.23.3",
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-react": "^7.33.2",
-    "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "prettier": "^3.2.5"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
-  }
+    "*.{js,jsx}": [
+      "yarn stylelint",
+      "yarn format",
+      "git-add"
+    ],
+    "*.{ts,tsx}": [
+      "yarn stylelint",
+      "yarn format",
+      "git-add"
+    ]
+  },
+  "pre-commit": [
+    "lint-staged"
+  ]
 }
