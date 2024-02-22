@@ -1,3 +1,7 @@
 ##EslintIgnore
-node_modules
-dist
+**/node_modules/**
+**/build/**
+**/.next/**
+next-env.d.ts
+package.json
+README.md
