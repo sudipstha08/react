@@ -2,8 +2,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 
-const s3PresignedUrl =
-  'https://burnside-health-uploads-raw.s3.us-west-2.amazonaws.com/3afeb0b2-20b3-4e81-b974-7307c37595f4/session321/test.jpg?AWSAccessKeyId=AKIAX3PPC2G6CJSJWQD3&Content-Type=image%2Fjpeg&Expires=1712823025&Signature=FXGOh3rpw5riZ7WWPgSSKydXcEQ%3D'
+const s3PresignedUrl = process.env.REACT_APP_PRESIGNED_URL
 
 function UploadPage() {
   const [selectedFile, setSelectedFile] = useState<any>(null)
@@ -24,9 +23,10 @@ function UploadPage() {
       const config = {
         method: 'put',
         maxBodyLength: Infinity,
-        url: 'https://burnside-health-uploads-raw.s3.us-west-2.amazonaws.com/3afeb0b2-20b3-4e81-b974-7307c37595f4/session321/o22.jpg?AWSAccessKeyId=AKIAX3PPC2G6CJSJWQD3&Content-Type=image%2Fjpeg&Expires=1712823758&Signature=Vd7i3u3P1JQPpaqT7Z0sEMe39ME%3D',
+        url: s3PresignedUrl,
         headers: {
-          'Content-Type': 'image/jpeg',
+          // 'Content-Type': 'image/jpeg',
+          'Content-Type': 'text/plain',
         },
         data: selectedFile,
       }
