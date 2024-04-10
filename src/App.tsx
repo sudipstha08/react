@@ -1,7 +1,7 @@
 import { Router, Switch, Route } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import { HomePage } from './containers'
+import { HomePage, UploadPage } from './containers'
 import './App.css'
 
 const queryClient = new QueryClient()
@@ -14,6 +14,7 @@ function App() {
         <Router history={history}>
           <Switch>
             <Route exact path="/" component={HomePage} />
+            <Route exact path="/upload" component={UploadPage} />
           </Switch>
         </Router>
       </QueryClientProvider>
