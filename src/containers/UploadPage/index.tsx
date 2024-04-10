@@ -3,7 +3,7 @@ import { useState } from 'react'
 import axios from 'axios'
 
 const s3PresignedUrl =
-  'https://burnside-health-uploads-raw.s3.us-west-2.amazonaws.com/er_fsd/testSession2/test1?AWSAccessKeyId=AKIAX3PPC2G6CJSJWQD3&Expires=1717281823&Signature=aQzoGFfKUau1ofdhQBWHgF4SRlI%3D'
+  'https://burnside-health-uploads-raw.s3.us-west-2.amazonaws.com/3afeb0b2-20b3-4e81-b974-7307c37595f4/session321/test.jpg?AWSAccessKeyId=AKIAX3PPC2G6CJSJWQD3&Content-Type=image%2Fjpeg&Expires=1712823025&Signature=FXGOh3rpw5riZ7WWPgSSKydXcEQ%3D'
 
 function UploadPage() {
   const [selectedFile, setSelectedFile] = useState<any>(null)
@@ -21,20 +21,25 @@ function UploadPage() {
     endDate.setMinutes(endDate.getMinutes() + 10)
 
     try {
-      const metadata = {
-        // Add metadata key-value pairs here
-        startDate: new Date().toISOString(),
-        endDate: endDate.toISOString(),
+      const config = {
+        method: 'put',
+        maxBodyLength: Infinity,
+        url: 'https://burnside-health-uploads-raw.s3.us-west-2.amazonaws.com/3afeb0b2-20b3-4e81-b974-7307c37595f4/session321/o22.jpg?AWSAccessKeyId=AKIAX3PPC2G6CJSJWQD3&Content-Type=image%2Fjpeg&Expires=1712823758&Signature=Vd7i3u3P1JQPpaqT7Z0sEMe39ME%3D',
+        headers: {
+          'Content-Type': 'image/jpeg',
+        },
+        data: selectedFile,
       }
 
-      const response = await axios.put(s3PresignedUrl, selectedFile, {
-        headers: {
-          ...metadata, // Merge metadata headers with Content-Type
-        },
-      })
-
+      axios
+        .request(config)
+        .then(response => {
+          console.log(JSON.stringify(response.data))
+        })
+        .catch(error => {
+          console.log(error)
+        })
       // eslint-disable-next-line no-console
-      console.log('response', response)
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error('Error uploading file:', error)
