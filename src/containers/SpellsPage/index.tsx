@@ -1,5 +1,11 @@
+import { Header } from "../../components"
+
 const SpellsPage = () => {
-  return <div>Hi</div>
+  return (
+    <>
+    <Header />
+    </>
+  )
 }
 
 export { SpellsPage }
