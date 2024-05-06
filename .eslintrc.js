@@ -13,6 +13,7 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
+    '@tanstack/query'
   ],
   parserOptions: {
     ecmaVersion: 2018,
@@ -68,6 +69,9 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 0,
     'react/jsx-uses-react': 0,
     'react/react-in-jsx-scope': 0,
+    "@tanstack/query/exhaustive-deps": "error",
+    "@tanstack/query/no-rest-destructuring": "warn",
+    "@tanstack/query/stable-query-client": "error",
     '@typescript-eslint/no-unused-vars': [
       2,
       {
