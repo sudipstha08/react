@@ -13,7 +13,7 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <Router history={history}>
           <Switch>
-            <Route exact path="/upload" component={SpellsPage} />
+            <Route exact path="/spells" component={SpellsPage} />
           </Switch>
         </Router>
       </QueryClientProvider>

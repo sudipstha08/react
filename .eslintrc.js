@@ -1,3 +1,5 @@
+const { plugins } = require("eslint-plugin-prettier/recommended");
+
 module.exports = {
   env: {
     node: true,
@@ -13,8 +15,8 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    '@tanstack/query'
   ],
+  plugins: ["@tanstack/query"],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',

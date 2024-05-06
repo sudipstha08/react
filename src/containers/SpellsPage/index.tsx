@@ -1,7 +1,5 @@
-import React from 'react'
-
 const SpellsPage = () => {
-  return <div>SpellsPage</div>
+  return <div>Hi</div>
 }
 
 export { SpellsPage }
