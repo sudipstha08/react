@@ -1,9 +1,10 @@
-import { Header } from "../../components"
+import { Header, Spells } from '../../components'
 
 const SpellsPage = () => {
   return (
     <>
-    <Header />
+      <Header />
+      <Spells />
     </>
   )
 }

@@ -4,7 +4,7 @@ import axios, { AxiosInstance } from 'axios'
  * Create Axios instance with custom config
  */
 export const API: AxiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_BASE_URL,
+  baseURL: 'https://www.dnd5eapi.co/api/',
   headers: {
     'Content-Type': 'application/json',
   },
