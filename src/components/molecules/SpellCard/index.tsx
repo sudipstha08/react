@@ -5,13 +5,7 @@ import { ISpell } from '../../../interfaces'
 import { spellStore } from '../../../store'
 import { SESSION_KEY } from '../../../constants'
 
-interface ICard {
-  id: string
-  name: string
-  desc: string
-  level: ISpell['level']
-  isFav?: boolean
-}
+type ICard = ISpell & { isFav?: boolean; id: string }
 
 const SpellCard: FC<ICard> = ({ id, name, level, isFav = false }) => {
   const [isFavourite, setIsFavourite] = useState(isFav)

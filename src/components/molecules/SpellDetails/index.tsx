@@ -57,7 +57,7 @@ const SpellDetails: FC = () => {
         name={'Casting Time'}
         value={spellData?.casting_time || '-'}
       />
-      <RowRenderer name={'School'} value={spellData?.school.name} />
+      <RowRenderer name={'School'} value={spellData?.school?.name} />
       <Rate
         defaultValue={spellData?.level}
         count={10}

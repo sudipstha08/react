@@ -80,11 +80,11 @@ const Spells: FC = () => {
                 return (
                   <SpellCard
                     key={spell.id}
-                    id={spell.id}
+                    id={spell.id as string}
                     name={spell.name}
                     desc={spell.desc}
                     level={spell.level}
-                    isFav={favSpells.includes(spell.id)}
+                    isFav={favSpells.includes(spell.id as string)}
                   />
                 )
               })}
