@@ -6,7 +6,8 @@ import { fadeIn } from 'react-animations'
 import Radium, { StyleRoot } from 'radium'
 import { SpellCard, SpellDetails } from '../../molecules'
 import { useSpells } from '../../../queries'
-import { spellStore } from '../../../store/spellStore'
+import { spellStore } from '../../../store'
+import { SESSION_KEY } from '../../../constants'
 
 const styles = {
   bounce: {
@@ -20,12 +21,19 @@ const Spells: FC = () => {
   const { currentSpell } = useSnapshot(spellStore)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [spellCount, setSpellsCount] = useState(20)
+  const [favSpells, setFavSpells] = useState<string[]>([])
 
   useEffect(() => {
     if (currentSpell) {
       setIsModalOpen(prevState => !prevState)
     }
   }, [currentSpell])
+
+  useEffect(() => {
+    const favItems =
+      JSON.parse(localStorage.getItem(SESSION_KEY) as string) || []
+    setFavSpells(favItems)
+  }, [])
 
   const closeModal = useCallback(() => {
     setIsModalOpen(prevState => !prevState)
@@ -76,6 +84,7 @@ const Spells: FC = () => {
                     name={spell.name}
                     desc={spell.desc}
                     level={spell.level}
+                    isFav={favSpells.includes(spell.id)}
                   />
                 )
               })}

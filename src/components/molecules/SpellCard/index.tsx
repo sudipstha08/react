@@ -1,26 +1,64 @@
-import React, { FC, useCallback } from 'react'
+import { FC, useCallback, useState } from 'react'
 import { Rate } from 'antd'
+import { HeartOutlined, HeartFilled } from '@ant-design/icons'
 import { ISpell } from '../../../interfaces'
-import { spellStore } from '../../../store/spellStore'
+import { spellStore } from '../../../store'
+import { SESSION_KEY } from '../../../constants'
 
 interface ICard {
   id: string
   name: string
   desc: string
   level: ISpell['level']
+  isFav?: boolean
 }
 
-const SpellCard: FC<ICard> = ({ id, name, level }) => {
+const SpellCard: FC<ICard> = ({ id, name, level, isFav = false }) => {
+  const [isFavourite, setIsFavourite] = useState(isFav)
+
   const onCardClick = useCallback(() => {
     spellStore.setCurrentSpell(id)
   }, [])
+
+  const handleFavClick = () => {
+    setIsFavourite(prevVal => !prevVal)
+    const favItems =
+      JSON.parse(localStorage.getItem(SESSION_KEY) as string) || []
+
+    if (isFavourite) {
+      const filteredFavItems = favItems.filter(item => item !== id)
+      localStorage.setItem(SESSION_KEY, JSON.stringify(filteredFavItems))
+    } else {
+      favItems.push(id)
+      localStorage.setItem(SESSION_KEY, JSON.stringify(favItems))
+    }
+  }
 
   return (
     <div
       className="flex flex-col bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5 cursor-pointer"
       onClick={onCardClick}
     >
-      <div className="text-slate-300 font-semibold text-sm">{name}</div>
+      <div className="flex justify-between">
+        <div className="text-slate-300 font-semibold text-sm">{name}</div>
+        <span onClick={e => e.stopPropagation()}>
+          <Rate
+            tooltips={[isFavourite ? 'Remove from Favourite' : 'Favourite']}
+            character={
+              isFavourite ? (
+                <HeartFilled
+                  style={{ color: 'red' }}
+                  onClick={handleFavClick}
+                />
+              ) : (
+                <HeartOutlined onClick={handleFavClick} />
+              )
+            }
+            count={1}
+            defaultValue={1}
+          />
+        </span>
+      </div>
       <Rate
         defaultValue={level}
         count={10}
