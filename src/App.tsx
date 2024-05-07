@@ -10,13 +10,16 @@ const history = createBrowserHistory()
 function App() {
   return (
     <div className="App">
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com"/>
-      <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet"></link>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+        rel="stylesheet"
+      ></link>
       <QueryClientProvider client={queryClient}>
         <Router history={history}>
           <Switch>
-            <Route exact path="/spells" component={SpellsPage} />
+            <Route exact path="/" component={SpellsPage} />
           </Switch>
         </Router>
       </QueryClientProvider>

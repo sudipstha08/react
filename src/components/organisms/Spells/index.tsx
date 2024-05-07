@@ -23,7 +23,7 @@ const Spells: FC = () => {
 
   if (isLoading) {
     return (
-      <section className="bg-no-repeat dark:bg-[#0B1120] min-h-[87.4vh] text-center">
+      <section className="bg-no-repeat dark:bg-[#0B1120] min-h-[85.8vh] text-center">
         <Spin size="large" className="mt-10 pt-[20vh]" />
       </section>
     )
