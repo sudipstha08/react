@@ -4,6 +4,7 @@ import { QueryClientProvider } from '@tanstack/react-query'
 import { SpellsPage } from './containers'
 import { queryClient } from './lib'
 import './App.css'
+import { PortalComponent } from './components'
 
 const history = createBrowserHistory()
 
@@ -23,6 +24,7 @@ function App() {
           </Switch>
         </Router>
       </QueryClientProvider>
+      <PortalComponent />
     </div>
   )
 }
