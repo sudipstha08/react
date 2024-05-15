@@ -1,6 +1,6 @@
 import { Router, Switch, Route } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
-import { QueryClient, QueryClientProvider } from 'react-query'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { HomePage, UploadPage } from './containers'
 import './App.css'
 

@@ -1,3 +1,5 @@
 export * from './ReactPdf'
 export * from './ReactPdfHook'
 export * from './HTMLToPDF'
+export * from './Spells'
+export * from './Header'

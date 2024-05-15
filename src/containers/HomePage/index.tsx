@@ -1,10 +1,6 @@
 import { FC } from 'react'
-import {
-  HTMLToPDF,
-  ReactPDF,
-  ReactPdfHook,
-  useUndoableState,
-} from '../../components'
+import { HTMLToPDF, ReactPDF, ReactPdfHook } from '../../components'
+import { useUndoableState } from '../../hooks'
 
 interface IProps {
   data?: any
