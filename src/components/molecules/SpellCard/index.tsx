@@ -10,11 +10,15 @@ type ICard = ISpell & { isFav?: boolean; id: string }
 const SpellCard: FC<ICard> = ({ id, name, level, isFav = false }) => {
   const [isFavourite, setIsFavourite] = useState(isFav)
 
-  const onCardClick = useCallback(() => {
+  const onCardClick = useCallback<
+    React.MouseEventHandler<HTMLDivElement>
+  >(() => {
     spellStore.setCurrentSpell(id)
   }, [])
 
-  const handleFavClick = () => {
+  const handleFavClick = useCallback<
+    React.MouseEventHandler<HTMLSpanElement>
+  >(() => {
     setIsFavourite(prevVal => !prevVal)
     const favItems =
       JSON.parse(localStorage.getItem(SESSION_KEY) as string) || []
@@ -26,7 +30,7 @@ const SpellCard: FC<ICard> = ({ id, name, level, isFav = false }) => {
       favItems.push(id)
       localStorage.setItem(SESSION_KEY, JSON.stringify(favItems))
     }
-  }
+  }, [])
 
   return (
     <div

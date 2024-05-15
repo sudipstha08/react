@@ -23,3 +23,8 @@
 | `axios`                 | promise based HTTP client |
 | `@tanstack/react-query` | data fetching library     |
 | `eslint/prettier`       | linting                   |
+
+
+[REFERENCES]
+- https://react-typescript-cheatsheet.netlify.app/
+- https://www.typescriptlang.org/docs/handbook/
