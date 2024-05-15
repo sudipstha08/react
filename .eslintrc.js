@@ -1,5 +1,3 @@
-const { plugins } = require("eslint-plugin-prettier/recommended");
-
 module.exports = {
   env: {
     node: true,
@@ -16,7 +14,6 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/typescript',
   ],
-  plugins: ["@tanstack/query"],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
@@ -71,9 +68,6 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 0,
     'react/jsx-uses-react': 0,
     'react/react-in-jsx-scope': 0,
-    "@tanstack/query/exhaustive-deps": "error",
-    "@tanstack/query/no-rest-destructuring": "warn",
-    "@tanstack/query/stable-query-client": "error",
     '@typescript-eslint/no-unused-vars': [
       2,
       {

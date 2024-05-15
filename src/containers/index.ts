@@ -1,1 +1,2 @@
-export * from './SpellsPage'
+export * from './HomePage'
+export * from './UploadPage'
