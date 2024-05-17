@@ -20,3 +20,9 @@ The CSS box model is a fundamental concept in web design and layout that defines
 |                                             |
 +---------------------------------------------+
 ```
+
+## Viewport
+
+## Resolutions 
+
+## Pixels
