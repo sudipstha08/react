@@ -19,7 +19,7 @@
 | `react-query`     | data fetching library     |
 | `eslint/prettier` | linting                   |
 
-[REFERENCES]
+## References
 - https://react-typescript-cheatsheet.netlify.app/
 - https://www.typescriptlang.org/docs/handbook/
 - https://react.dev/learn/describing-the-ui
@@ -28,6 +28,7 @@
 - https://www.youtube.com/watch?v=324czHa9O9U
 - https://www.youtube.com/watch?v=FkowOdMjvYo
 - https://www.youtube.com/watch?v=ZqEa8fTxypQ
+- https://www.youtube.com/watch?v=y2UsQB3WSvo
 - How use state useEffect useRef (hooks) works ? React ecosystem Advanced concepts
 
 suspense
