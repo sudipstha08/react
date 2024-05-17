@@ -1,7 +1,11 @@
-import { FC } from 'react'
+import { FC, useRef } from 'react'
 import styled from 'styled-components'
 import { Canvas } from '@react-three/fiber'
-import { Sphere, TorusKnot } from '../../components'
+import * as THREE from 'three'
+import { OrbitControls, useHelper } from '@react-three/drei'
+import { DirectionalLightHelper } from 'three'
+import { Leva, useControls } from 'leva'
+import { TorusKnot } from '../../components'
 
 const Container = styled.div`
   padding-top: 100px;
@@ -14,14 +18,31 @@ const Container = styled.div`
   }
 `
 
-const FiberPage: FC = () => {
-  return (
-    <Container>
-      <Canvas>
-        <directionalLight position={[0, 0, 2]} intensity={0.5} />
-        <ambientLight intensity={0.1} />
+const Scene = () => {
+  const directionalLightRef = useRef<THREE.DirectionalLight>(null)
 
-        {/* <group position={[0, -1, 0]}>
+  const { lightColor, lightIntensity } = useControls({
+    lightColor: 'white',
+    lightIntensity: {
+      value: 0.5,
+      min: 0,
+      max: 5,
+      step: 0.2,
+    },
+  })
+
+  useHelper(directionalLightRef as any, DirectionalLightHelper, 0.5, 'white')
+  return (
+    <>
+      <directionalLight
+        position={[0, 0, 2]}
+        intensity={lightIntensity}
+        ref={directionalLightRef}
+        color={lightColor}
+      />
+      <ambientLight intensity={0.1} />
+
+      {/* <group position={[0, -1, 0]}>
           <Cube position={[-4, -2, 0]} size={[3, 3, 1]} color="red" />
 
           <Cube position={[3, -2, 0]} size={[3, 3, 1]} color="orange" />
@@ -29,20 +50,31 @@ const FiberPage: FC = () => {
           <Cube position={[2, 3, 0]} size={[3, 4, 1]} color="yellow" />
         </group> */}
 
-        {/* <Cube position={[0, 0, 0]} size={[3, 3, 3]} color="blue" /> */}
-        <Sphere position={[1, 0, 1]} color={'orange'} args={[1, 60, 60]} />
-        {/* <Torus position={[6, 0, 0]} size={[2, 0.5, 40, 40]} color="blue" /> */}
+      {/* <Cube position={[0, 0, 0]} size={[3, 3, 3]} color="blue" /> */}
+      {/* <Sphere position={[1, 0, 1]} color={'orange'} args={[1, 60, 60]} /> */}
+      {/* <Torus position={[2, 0, 0]} size={[2, 0.5, 40, 40]} color="blue" /> */}
 
-        <TorusKnot
-          position={[-2, 0, 0]}
-          color={'hotpink'}
-          size={[1, 0.2, 1000, 100]}
-        />
-      </Canvas>
-    </Container>
+      <TorusKnot
+        position={[0, 0, 0]}
+        color={'hotpink'}
+        size={[0.1, 1000, 50]}
+      />
+      <OrbitControls enableZoom={false} />
+    </>
   )
 }
 
-export { FiberPage }
+export const FiberPage: FC = () => {
+  return (
+    <>
+      <Leva />
+      <Container>
+        <Canvas>
+          <Scene />
+        </Canvas>
+      </Container>
+    </>
+  )
+}
 
 // mesh - represents polygon objects
