@@ -60,6 +60,7 @@ module.exports = {
     'react/jsx-no-target-blank': 0,
     'no-unused-vars': 'off',
     'no-useless-return': 'error',
+    'react/no-unknown-property':0,
     'no-return-await': 'error',
     'no-else-return': 'error',
     '@typescript-eslint/no-var-requires': 0,

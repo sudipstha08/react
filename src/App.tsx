@@ -1,7 +1,13 @@
 import { Router, Switch, Route } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { HomePage, UploadPage } from './containers'
+import {
+  FiberPage,
+  HomePage,
+  PortfolioPage,
+  SpellsPage,
+  UploadPage,
+} from './containers'
 import './App.css'
 
 const queryClient = new QueryClient()
@@ -15,6 +21,9 @@ function App() {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/upload" component={UploadPage} />
+            <Route exact path="/spells" component={SpellsPage} />
+            <Route exact path="/portfolio" component={PortfolioPage} />
+            <Route exact path="/fiber" component={FiberPage} />
           </Switch>
         </Router>
       </QueryClientProvider>

@@ -13,7 +13,7 @@ export const ReactPdfHook = () => {
 
   if (instance.loading) return <div>Loading ...</div>
 
-  if (instance.error) return <div>Something went wrong: {error}</div>
+  if (instance.error) return <div>Something went wrong: {error as any}</div>
 
   return (
     <a href={instance.url!} download="test.pdf">
