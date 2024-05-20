@@ -23,3 +23,6 @@
 
 - Typically used for desktop applications, games, simulations, and professional graphics applications.
 - Runs on various operating systems including Windows, macOS, Linux, and others.
+
+
+- https://github.com/openlayers/ol-mapbox-style#apply

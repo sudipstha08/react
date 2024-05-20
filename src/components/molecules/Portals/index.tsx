@@ -1,7 +1,7 @@
-import React from 'react'
+import { FC } from 'react'
 import ReactDOM from 'react-dom'
 
-const PortalComponent = () => {
+export const PortalComponent: FC = () => {
   return ReactDOM.createPortal(
     <div>
       <h1>THis is a portal component</h1>
@@ -9,5 +9,3 @@ const PortalComponent = () => {
     document.getElementById('portal') as HTMLElement,
   )
 }
-
-export { PortalComponent }

@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import {
   FiberPage,
   HomePage,
+  OpenLayer,
   PortfolioPage,
   SpellsPage,
   UploadPage,
@@ -24,6 +25,7 @@ function App() {
             <Route exact path="/spells" component={SpellsPage} />
             <Route exact path="/portfolio" component={PortfolioPage} />
             <Route exact path="/fiber" component={FiberPage} />
+            <Route exact path="/openlayer" component={OpenLayer} />
           </Switch>
         </Router>
       </QueryClientProvider>

@@ -15,6 +15,9 @@ module.exports = {
     'plugin:import/typescript',
     'react-app'
   ],
+  plugins: [
+    'eslint-plugin-react-compiler',
+  ],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
@@ -70,6 +73,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 0,
     'react/jsx-uses-react': 0,
     'react/react-in-jsx-scope': 0,
+    'react-compiler/react-compiler': "error",
     '@typescript-eslint/no-unused-vars': [
       2,
       {
