@@ -1,11 +1,12 @@
-import React, { FC } from 'react'
+import React from 'react';
 
-interface IProps {
-  label: string
+interface ButtonProps {
+  label: string;
+  onClick: () => void;
 }
 
-const Button: FC<IProps> = ({ label }) => {
-  return <button>{label}</button>
-}
+const Button: React.FC<ButtonProps> = ({ label, onClick }) => (
+  <button onClick={onClick}>{label}</button>
+);
 
-export { Button }
+export  {Button};

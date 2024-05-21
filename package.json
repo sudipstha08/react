@@ -6,7 +6,7 @@
     "start-dev": "GENERATE_SOURCEMAP=false && react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "lint:fix": "eslint './src/**/*.{ts,tsx}' --fix",
@@ -34,7 +34,7 @@
     "@react-three/fiber": "^8.16.6",
     "@tanstack/react-query": "^5.36.2",
     "@testing-library/react": "^14.2.1",
-    "@types/jest": "^26.0.15",
+    "@types/jest": "^29.5.12",
     "@types/node": "^12.0.0",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
@@ -46,6 +46,7 @@
     "eslint-import-resolver-babel-module": "^5.3.2",
     "eslint-plugin-react-compiler": "^0.0.0-experimental-c8b3f72-20240517",
     "html2canvas": "^1.4.1",
+    "jest-environment-jsdom": "^29.7.0",
     "jspdf": "^2.5.1",
     "leva": "^0.9.35",
     "lodash": "^4.17.21",
@@ -61,12 +62,16 @@
     "react-scripts": "^5.0.1",
     "styled-components": "^6.1.11",
     "three": "^0.164.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
     "valtio": "^1.13.2",
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-typescript": "^7.24.1",
+    "@jest/globals": "^29.7.0",
+    "@testing-library/jest-dom": "^6.4.5",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0",
     "eslint": "^8.56.0",
@@ -78,7 +83,9 @@
     "eslint-plugin-react": "^7.33.2",
     "jest": "^29.7.0",
     "lint-staged": "^11.0.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "react-test-renderer": "^18.3.1",
+    "ts-jest": "^29.1.3"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -97,5 +104,9 @@
   ],
   "resolutions": {
     "styled-components": "^5"
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:sudipstha08/react.git",
+  "author": "sudipstha08 <sudipstha08@gmail.com>",
+  "license": "MIT"
 }

@@ -17,6 +17,7 @@ module.exports = {
   ],
   plugins: [
     'eslint-plugin-react-compiler',
+    'jest'
   ],
   parserOptions: {
     ecmaVersion: 2018,
@@ -74,6 +75,11 @@ module.exports = {
     'react/jsx-uses-react': 0,
     'react/react-in-jsx-scope': 0,
     'react-compiler/react-compiler': "error",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
     '@typescript-eslint/no-unused-vars': [
       2,
       {
