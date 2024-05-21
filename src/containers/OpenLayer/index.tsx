@@ -110,3 +110,4 @@ export function OpenLayer() {
 }
 
 // https://mxd.codes/articles/how-to-create-a-web-map-with-open-layers-and-react
+// https://jsfiddle.net/gberginc/28LL9f7o/
