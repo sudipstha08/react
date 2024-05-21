@@ -12,7 +12,6 @@ export const Cube: FC<{ position: Vector3; size: any; color: Color }> = ({
   useFrame((state, delta) => {
     // delta is a time diff between current frame and last frame
     if (!ref.current) return
-    // console.log(delta)
     ref.current.rotation.x += delta
     ref.current.rotation.y += delta * 3
     ref.current.position.z = Math.sin(state.clock.elapsedTime) * 2

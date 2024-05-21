@@ -17,7 +17,6 @@ export const Sphere: FC<{ position: Vector3; args: any; color: Color }> = ({
   useFrame((_, delta) => {
     // delta is a time diff between current frame and last frame
     if (!ref.current) return
-    // console.log(delta)
     // ref.current.rotation.x += delta
     const speed = isHovered ? 1 : 0.2
     ref.current.rotation.y += delta * speed
