@@ -1,4 +1,6 @@
+import { screen, waitFor } from '@testing-library/react'
 import { fetchUser } from '../../services/home'
+import * as services from '../../services/home'
 
 const mockResponse = {
   userId: 1,
@@ -11,13 +13,13 @@ global.fetch = jest.fn(() =>
   Promise.resolve({
     json: () => Promise.resolve({ ...mockResponse }),
   }),
-) as any
+) as jest.Mock
 
 // beforeEach(() => {
 //   global.fetch.mockClear()
 // })
 
-const failService = async() => {
+const failService = async () => {
   return null
 }
 
@@ -45,5 +47,23 @@ describe('fetchUser', () => {
     const rate = await failService()
 
     expect(rate).toEqual(null)
+  })
+})
+
+describe('fetchUser test using jest', async () => {
+  const mockFetchData = jest
+    .spyOn(services, 'fetchUser')
+    .mockImplementation(async () => {
+      return mockResponse
+    })
+
+  const result = await fetchUser()
+
+  console.log("restult====>", result)
+  expect(mockFetchData).toHaveBeenCalled()
+
+  await waitFor(() => {
+    // expect(screen.getByText(/kunal/i)).toBeInTheDocument()
+    expect(result).toEqual(mockResponse)
   })
 })
