@@ -1,19 +1,24 @@
 ## React
 - `Mounting`, `Updating`, and `Unmounting` are the three main phases in react
 
+## Rendering
+- “Rendering” is anytime the function(Component) gets called which is sending you some instruction on creating a DOM
+- “Mounting” is when the component rendered for the first time i.e. react builds the DOM for this component for the first time.
+  
 ### Mounting
 - `Mounting` in React refers to the process by which a component is created and inserted into the DOM. 
 - This is the first phase in the lifecycle of a React component, and it includes a series of methods that are called in a specific order to set up and display the component.
 - The render()  is the method that actually outputs the HTML to the DOM.
 - The local state in any component is set to the default value when the component is mounted and not when it is rendered
+- Mounting refers to the initial page loading when your React component is first rendered.
+- React does so by "mounting" (adding nodes to the DOM), "unmounting" (removing them from the DOM), and "updating" (making changes to nodes already in the DOM).
+- This process of creating instances and DOM nodes corresponding to React components, and inserting them into the DOM, is called mounting.
+- In a React component, initial rendering happens before mounting. Rendering returns the elements which are supposed to be mounted in the DOM. Mounting a react component means the actual addition of the DOM elements created by the react component into the browser DOM for the first time.
 
 ## Unmouting phase
 - In the `updating` phase, the component gets updated while being present in the DOM. 
 - In the `unmounting` phase, the component is removed from the DOM.
 
-## Rendering
-- “Rendering” is anytime the function(Component) gets called which is sending you some instruction on creating a DOM
-- “Mounting” is when the component rendered for the first time i.e. react builds the DOM for this component for the first time.
 
 ## Rerendering
 - A “re-render” is when the React calls the function component again to get a new set of instruction on an already mounted component.

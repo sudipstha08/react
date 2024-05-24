@@ -32,6 +32,7 @@
 - https://www.youtube.com/watch?v=FkowOdMjvYo
 - https://www.youtube.com/watch?v=ZqEa8fTxypQ
 - https://www.youtube.com/watch?v=y2UsQB3WSvo
+- https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML
 - How use state useEffect useRef (hooks) works ? React ecosystem Advanced concepts
 
 suspense
