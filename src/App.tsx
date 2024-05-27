@@ -7,6 +7,7 @@ import {
   OpenLayer,
   PortfolioPage,
   SpellsPage,
+  TestPage,
   UploadPage,
 } from './containers'
 import './App.css'
@@ -26,6 +27,7 @@ function App() {
             <Route exact path="/portfolio" component={PortfolioPage} />
             <Route exact path="/fiber" component={FiberPage} />
             <Route exact path="/openlayer" component={OpenLayer} />
+            <Route exact path="/test" component={TestPage} />
           </Switch>
         </Router>
       </QueryClientProvider>

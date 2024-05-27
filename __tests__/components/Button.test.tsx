@@ -1,7 +1,7 @@
 // src/components/Button.test.tsx
 import { render, screen, fireEvent } from '@testing-library/react'
 import renderer from 'react-test-renderer'
-import { Button } from '../../components/atoms/Button'
+import { Button } from '../../src/components/atoms/Button'
 
 /**
  * Unit testing

@@ -1,6 +1,6 @@
-import { screen, waitFor } from '@testing-library/react'
-import { fetchUser } from '../../services/home'
-import * as services from '../../services/home'
+import { waitFor } from '@testing-library/react'
+import { fetchUser } from '../../src/services/home'
+import * as services from '../../src/services/home'
 
 const mockResponse = {
   userId: 1,
@@ -59,7 +59,6 @@ describe('fetchUser test using jest', async () => {
 
   const result = await fetchUser()
 
-  console.log("restult====>", result)
   expect(mockFetchData).toHaveBeenCalled()
 
   await waitFor(() => {

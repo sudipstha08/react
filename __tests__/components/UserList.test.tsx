@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { UserList } from '../../components/molecules'
+import { UserList } from '../../src/components/molecules'
 import userEvent from '@testing-library/user-event'
 
 const mockData = [

@@ -9,6 +9,7 @@
 | `yarn lint`    | run linter                 |
 | `yarn remove`  | remove a package           |
 | `yarn build`   | build application          |
+| `yarn test`    | Run test cases             |
 
 ## Tech Stacks :package:
 
@@ -25,6 +26,7 @@
 - https://react.dev/learn/describing-the-ui
 - https://www.reactenlightenment.com/
 - https://javascript.info/
+- https://immerjs.github.io/immer/
 - https://www.conventionalcommits.org/en/v1.0.0/
 - https://www.youtube.com/watch?v=qTDnwmMF5q8
 - https://www.youtube.com/watch?v=ipOYH_Wi9Xw

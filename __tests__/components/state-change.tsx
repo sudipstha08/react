@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { TestingStateChange } from '../../components/molecules'
+import { TestingStateChange } from '../../src/components/molecules'
 import userEvent from '@testing-library/user-event'
 
 test('Testing page load && state change', () => {
