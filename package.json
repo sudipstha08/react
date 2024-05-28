@@ -14,7 +14,8 @@
     "typecheck": "tsc-files --noEmit",
     "format": "eslint -c .eslintrc.js --ignore-path .eslintignore --fix",
     "fix": "yarn lint:ts --fix",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "cy:open": "cypress open"
   },
   "browserslist": {
     "production": [
@@ -79,6 +80,7 @@
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0",
     "cross-fetch": "^4.0.0",
+    "cypress": "^13.10.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-react": "^1.1.7",

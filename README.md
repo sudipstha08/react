@@ -21,6 +21,10 @@
 | `react-query`     | data fetching library     |
 | `eslint/prettier` | linting                   |
 
+
+## cypress
+- yarn cypress open
+
 ## References
 - https://react-typescript-cheatsheet.netlify.app/
 - https://www.typescriptlang.org/docs/handbook/
