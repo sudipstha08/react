@@ -1,34 +1,39 @@
 /* eslint-disable no-console */
-/* eslint-disable prettier/prettier */
-import { useRef, useState } from 'react'
-import { CatList } from '../../components'
+import { useState, useRef, useEffect } from 'react'
 
-export function TestPage() {
-  let countRef = useRef(2)
-  let myRef = useRef(null)
-  const [isClick, setIsClicked] = useState(false)
+function VideoPlayer({ src, isPlaying }) {
+  const ref = useRef<HTMLVideoElement>(null)
+  const [count, setCount] = useState(0)
+  useEffect(() => {
+    console.log(' mountingh')
+    setCount(count + 1)
+    return () => {
+      console.log('unmounting==>')
+    }
+  }, [])
 
-  countRef.current = 10
-
-  console.log("rerendering", myRef.current)
-
-  function handleClick() {
-    // This doesn't re-render the component!
-    countRef.current = countRef.current + 1
-    console.log(countRef.current)
+  if (isPlaying) {
+    console.time('filter array')
+    ref.current && ref.current.play() // Calling these while rendering isn't allowed.
+    console.timeEnd('filter array')
+  } else {
+    ref.current && ref.current.pause() // Also, this crashes.
   }
 
+  return <video ref={ref} src={src} loop playsInline />
+}
+
+export function TestPage() {
+  const [isPlaying, setIsPlaying] = useState(false)
   return (
     <>
-    <div ref={myRef}>Hello</div>
-      <button onClick={handleClick}>
-        You clicked {countRef.current} times
+      <button onClick={() => setIsPlaying(!isPlaying)}>
+        {isPlaying ? 'Pause' : 'Play'}
       </button>
-      <button onClick={() => setIsClicked(!isClick)}>
-        You clicked {isClick.toString()}
-      </button>
-
-      <CatList />
+      <VideoPlayer
+        isPlaying={isPlaying}
+        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+      />
     </>
   )
 }

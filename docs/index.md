@@ -15,9 +15,13 @@
 - This process of creating instances and DOM nodes corresponding to React components, and inserting them into the DOM, is called mounting.
 - In a React component, initial rendering happens before mounting. Rendering returns the elements which are supposed to be mounted in the DOM. Mounting a react component means the actual addition of the DOM elements created by the react component into the browser DOM for the first time.
 
+
 ## Unmouting phase
 - In the `updating` phase, the component gets updated while being present in the DOM. 
 - In the `unmounting` phase, the component is removed from the DOM.
+- component mounts when it’s added to the screen.
+- A component updates when it receives new props or state, usually in response to an interaction.
+- A component unmounts when it’s removed from the screen.
 
 
 ## Rerendering

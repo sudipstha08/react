@@ -2,14 +2,15 @@
 
 ## Basic commands :wrench:
 
-| commands       | description                |
-| -------------- | -------------------------- |
-| `yarn start`   | run the development server |
-| `yarn install` | install dependencies       |
-| `yarn lint`    | run linter                 |
-| `yarn remove`  | remove a package           |
-| `yarn build`   | build application          |
-| `yarn test`    | Run test cases             |
+| commands                  | description                |
+| ------------------------- | -------------------------- |
+| `yarn start`              | run the development server |
+| `yarn install`            | install dependencies       |
+| `yarn lint`               | run linter                 |
+| `yarn remove`             | remove a package           |
+| `yarn build`              | build application          |
+| `yarn test`               | Run test cases             |
+| `yarn test -- --coverage` | Coverage Reporting         |
 
 ## Tech Stacks :package:
 
@@ -41,3 +42,34 @@
 suspense
 
 create ctx vs use ctx
+useMemo vs memo
+
+## OpenSource
+- https://github.com/taniarascia/takenote
+- https://github.com/thedevs-network/kutt
+- https://github.com/getsentry/sentry
+- https://github.com/EddieHubCommunity/BioDrop
+- https://github.com/reactplay/react-play
+- https://github.com/rohitdasu/projectmate
+- https://www.linkshub.dev/
+- https://github.com/saadpasta/developerFolio?tab=readme-ov-file#linking-portfolio-to-github
+- https://github.com/Dun-sin/Whisper
+- https://github.com/refinedev/refine
+- https://github.com/dabit3/write-with-me
+- https://github.com/oldboyxx/jira_clone
+
+## Best Pratices
+– Naming Conventions
+– Avoid the Use of the State as much as possible
+– Write DRY Code
+– Try to Avoid Unnecessary Div
+– Remove Unnecessary Comments from the Code
+– Use Destructuring to Get Props
+– Apply ES6 Spread Function
+– The Rule of 3
+– Manage too Many Props with Parent/Child Component
+– Use Map Function for Dynamic Rendering of Arrays
+– Dynamic Rendering with && and the Ternary Operator
+– Use es-lint or Prettier for Formatting
+– Write Tests for Each Component
+– Make Use of a Linter
