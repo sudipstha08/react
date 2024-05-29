@@ -27,6 +27,7 @@ export const Sphere: FC<{ position: Vector3; args: any; color: Color }> = ({
     <mesh
       position={position}
       ref={ref}
+      // eslint-disable-next-line no-sequences
       onPointerEnter={e => (e.stopPropagation(), setIsHovered(true))}
       onPointerLeave={() => setIsHovered(false)}
       onClick={() => setIsClicked(prev => !prev)}

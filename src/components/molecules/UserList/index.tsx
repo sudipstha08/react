@@ -3,7 +3,7 @@ export const UserList = ({ data, handleClick }) => {
     <div>
       <input type="text" placeholder="testing" />
       <button> Submit </button>
-<button> Apply</button>
+      <button> Apply</button>
       <ul className="testing">
         {data.map(item => (
           <li key={item.id}>
@@ -11,9 +11,9 @@ export const UserList = ({ data, handleClick }) => {
             {item.first_name},{item.last_name},
             <a
               onClick={() => {
-                console.log('email link clicked')
                 handleClick()
               }}
+              href="/"
             >
               {item.email}
             </a>

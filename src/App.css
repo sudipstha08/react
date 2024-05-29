@@ -81,3 +81,16 @@ canvas#bg {
   .left {
     grid-column: 6 / 12;
   }
+
+  .fundamental-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem;
+    min-height: 100vh;
+  }
+
+  .fundamental-header {
+    margin-bottom: 20px;
+  }
