@@ -32,6 +32,7 @@ function App() {
             <Route exact path="/test" component={TestPage} />
             <Route exact path="/fundamentals" component={FundamentalsPage} />
             <Route exact path="/forms" component={FormPage} />
+            <Route exact path="/examples" component={FormPage} />
           </Switch>
         </Router>
       </QueryClientProvider>
