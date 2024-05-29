@@ -4,13 +4,16 @@ import { useState, useRef, useEffect } from 'react'
 function VideoPlayer({ src, isPlaying }) {
   const ref = useRef<HTMLVideoElement>(null)
   const [count, setCount] = useState(0)
+
   useEffect(() => {
     console.log(' mountingh')
-    setCount(count + 1)
+    setCount(prevCount => prevCount + 1)
     return () => {
       console.log('unmounting==>')
     }
   }, [])
+
+  console.log('count===>', count)
 
   if (isPlaying) {
     console.time('filter array')

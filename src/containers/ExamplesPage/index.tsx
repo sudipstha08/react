@@ -1,5 +1,10 @@
 import styled from 'styled-components'
-import { GrudgeList, ItemsAccordion, PostButton } from '../../components'
+import {
+  GrudgeList,
+  ItemsAccordion,
+  NavBar,
+  PostButton,
+} from '../../components'
 
 const items = [
   {
@@ -45,20 +50,23 @@ const StyledMain = styled.main`
     margin-top: 20px;
   }
 
-  .postButton {
+  .postButton button {
     background-color: white;
   }
 `
 
 export function ExamplesPage() {
   return (
-    <StyledMain>
-      <h1 className="header">Examples</h1>
-      <ItemsAccordion items={items} />
-      <div className="postButton">
-        <PostButton className="postButton" />
-      </div>
-      <GrudgeList />
-    </StyledMain>
+    <>
+      <NavBar />
+      <StyledMain>
+        <h1 className="header">Examples</h1>
+        <ItemsAccordion items={items} />
+        <div className="postButton">
+          <PostButton className="postButton" />
+        </div>
+        <GrudgeList />
+      </StyledMain>
+    </>
   )
 }

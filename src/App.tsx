@@ -1,7 +1,7 @@
-import { Router, Switch, Route } from 'react-router-dom'
-import { createBrowserHistory } from 'history'
+import { Route, Routes } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import {
+  ExamplesPage,
   FiberPage,
   FormPage,
   FundamentalsPage,
@@ -15,28 +15,27 @@ import {
 import './App.css'
 
 const queryClient = new QueryClient()
-const history = createBrowserHistory()
 
 function App() {
   return (
-    <div className="App">
-      <QueryClientProvider client={queryClient}>
-        <Router history={history}>
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/upload" component={UploadPage} />
-            <Route exact path="/spells" component={SpellsPage} />
-            <Route exact path="/portfolio" component={PortfolioPage} />
-            <Route exact path="/fiber" component={FiberPage} />
-            <Route exact path="/openlayer" component={OpenLayer} />
-            <Route exact path="/test" component={TestPage} />
-            <Route exact path="/fundamentals" component={FundamentalsPage} />
-            <Route exact path="/forms" component={FormPage} />
-            <Route exact path="/examples" component={FormPage} />
-          </Switch>
-        </Router>
-      </QueryClientProvider>
-    </div>
+    <>
+      <div className="App">
+        <QueryClientProvider client={queryClient}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/upload" element={<UploadPage />} />
+            <Route path="/spells" element={<SpellsPage />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/fiber" element={<FiberPage />} />
+            <Route path="/openlayer" element={<OpenLayer />} />
+            <Route path="/test" element={<TestPage />} />
+            <Route path="/fundamentals" element={<FundamentalsPage />} />
+            <Route path="/forms" element={<FormPage />} />
+            <Route path="/examples" element={<ExamplesPage />} />
+          </Routes>
+        </QueryClientProvider>
+      </div>
+    </>
   )
 }
 

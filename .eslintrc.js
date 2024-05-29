@@ -57,7 +57,7 @@ module.exports = {
     'no-alert': 'error',
     '@typescript-eslint/no-explicit-any': 0,
     'react/display-name': 0,
-    'react-hooks/exhaustive-deps': 0,
+    'react-hooks/exhaustive-deps': 1,
     'sort-imports': 'off',
     'prettier/prettier': 'error',
     'import/first': 'error',
