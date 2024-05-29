@@ -90,7 +90,9 @@ canvas#bg {
     padding: 6rem;
     min-height: 100vh;
   }
-
+  
   .fundamental-header {
     margin-bottom: 20px;
+    color: red;
+    font-size: 30px;
   }

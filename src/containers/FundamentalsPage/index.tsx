@@ -64,7 +64,9 @@ const items = [
 export function FundamentalsPage() {
   return (
     <main className="fundamental-main">
-      <h1 className="fundamental-header">Testing Fundamentals</h1>
+      <h1 data-test="fundamentals-header" className="fundamental-header">
+        Testing Fundamentals
+      </h1>
       <ItemsAccordion items={items} />
     </main>
   )
