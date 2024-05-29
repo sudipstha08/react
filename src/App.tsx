@@ -3,6 +3,7 @@ import { createBrowserHistory } from 'history'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import {
   FiberPage,
+  FormPage,
   FundamentalsPage,
   HomePage,
   OpenLayer,
@@ -30,6 +31,7 @@ function App() {
             <Route exact path="/openlayer" component={OpenLayer} />
             <Route exact path="/test" component={TestPage} />
             <Route exact path="/fundamentals" component={FundamentalsPage} />
+            <Route exact path="/forms" component={FormPage} />
           </Switch>
         </Router>
       </QueryClientProvider>
