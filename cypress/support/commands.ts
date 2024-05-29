@@ -35,3 +35,17 @@
 //     }
 //   }
 // }
+
+declare namespace Cypress {
+  interface Chainable {
+    /**
+     * Custom command to login to the application.
+     * @example cy.login('username', 'password')
+     */
+    getDataTest(dataTestSelector: string): Chainable
+  }
+}
+
+Cypress.Commands.add('getDataTest', dataTestSelector => {
+  return cy.get(`[data-test="${dataTestSelector}"]`)
+})
