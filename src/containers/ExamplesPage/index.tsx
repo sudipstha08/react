@@ -1,10 +1,5 @@
 import styled from 'styled-components'
-import {
-  GrudgeList,
-  ItemsAccordion,
-  NavBar,
-  PostButton,
-} from '../../components'
+import { GrudgeList, ItemsAccordion, PostButton } from '../../components'
 
 const items = [
   {
@@ -58,7 +53,6 @@ const StyledMain = styled.main`
 export function ExamplesPage() {
   return (
     <>
-      <NavBar />
       <StyledMain>
         <h1 className="header">Examples</h1>
         <ItemsAccordion items={items} />

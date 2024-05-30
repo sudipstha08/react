@@ -13,6 +13,7 @@ import {
   UploadPage,
 } from './containers'
 import './App.css'
+import { NavBar } from './components'
 
 const queryClient = new QueryClient()
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
       <div className="App">
+        <NavBar />
         <QueryClientProvider client={queryClient}>
           <Routes>
             <Route path="/" element={<HomePage />} />
