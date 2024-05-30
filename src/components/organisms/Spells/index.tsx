@@ -38,7 +38,7 @@ const Spells: FC = () => {
   const closeModal = useCallback(() => {
     setIsModalOpen(prevState => !prevState)
     spellStore.setCurrentSpell(null)
-  }, [currentSpell])
+  }, [])
 
   const onCountClick = () => {
     setSpellsCount(prevCount =>
