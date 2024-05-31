@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import {
+  ComponentTestPage,
   ExamplesPage,
   FiberPage,
   FormPage,
@@ -34,6 +35,7 @@ function App() {
             <Route path="/fundamentals" element={<FundamentalsPage />} />
             <Route path="/forms" element={<FormPage />} />
             <Route path="/examples" element={<ExamplesPage />} />
+            <Route path="/component" element={<ComponentTestPage />} />
           </Routes>
         </QueryClientProvider>
       </div>
