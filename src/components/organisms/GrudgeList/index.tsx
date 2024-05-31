@@ -36,7 +36,9 @@ export function GrudgeList() {
 
   return (
     <div style={{ margin: '20px' }}>
-      <h3 style={{ margin: '20px 0px' }}>{title}</h3>
+      <h3 data-test="grudge-list-title" style={{ margin: '20px 0px' }}>
+        {title}
+      </h3>
       <div>
         <TextField
           label="Add Grudge"
