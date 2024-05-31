@@ -19,8 +19,6 @@
 - `Shader Compilation`: Writing and compiling vertex and fragment shaders in GLSL.
 - `Buffer Management`: Creating and managing buffers (like vertex buffers) that store vertex data.
 - `Rendering`: Drawing graphics by issuing draw calls to the GPU.
-
-
 - Typically used for desktop applications, games, simulations, and professional graphics applications.
 - Runs on various operating systems including Windows, macOS, Linux, and others.
 
