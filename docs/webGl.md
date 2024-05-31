@@ -24,6 +24,7 @@
 | Extensive support for advanced features         | Limited to what's supported by browsers            |
 
 
+
 [REFERENCES]
 
 - https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API

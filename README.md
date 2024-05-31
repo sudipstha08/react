@@ -63,17 +63,17 @@ useMemo vs memo
 - https://github.com/oldboyxx/jira_clone
 
 ## Best Pratices
-– Naming Conventions
-– Avoid the Use of the State as much as possible
-– Write DRY Code
-– Try to Avoid Unnecessary Div
-– Remove Unnecessary Comments from the Code
-– Use Destructuring to Get Props
-– Apply ES6 Spread Function
-– The Rule of 3
-– Manage too Many Props with Parent/Child Component
-– Use Map Function for Dynamic Rendering of Arrays
-– Dynamic Rendering with && and the Ternary Operator
-– Use es-lint or Prettier for Formatting
-– Write Tests for Each Component
-– Make Use of a Linter
+- Naming Conventions
+- Avoid the Use of the State as much as possible
+- Write DRY Code
+- Try to Avoid Unnecessary Div
+- Remove Unnecessary Comments from the Code
+- Use Destructuring to Get Props
+- Apply ES6 Spread Function
+- The Rule of 3
+- Manage too Many Props with Parent/Child Component
+- Use Map Function for Dynamic Rendering of Arrays
+- Dynamic Rendering with && and the Ternary Operator
+- Use es-lint or Prettier for Formatting
+- Write Tests for Each Component
+- Make Use of a Linter
