@@ -1,4 +1,4 @@
-import { useSyncExternalStore } from 'react'
+import { useDebugValue, useSyncExternalStore } from 'react'
 
 function subscribe(callback) {
   window.addEventListener('online', callback)
@@ -11,9 +11,11 @@ function subscribe(callback) {
 
 export function useOnlineStatus() {
   // ✅ Good: Subscribing to an external store with a built-in Hook
-  return useSyncExternalStore(
+  const isOnline = useSyncExternalStore(
     subscribe, // React won't resubscribe for as long as you pass the same function
     () => navigator.onLine, // How to get the value on the client
     () => true, // How to get the value on the server
   )
+  useDebugValue(isOnline ? 'Online' : 'Offline')
+  return isOnline
 }

@@ -1,11 +1,12 @@
 /* eslint-disable no-console */
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import axios from 'axios'
 
 const s3PresignedUrl = process.env.REACT_APP_PRESIGNED_URL
 
 function UploadPage() {
   const [selectedFile, setSelectedFile] = useState<any>(null)
+  const id = useId()
 
   const handleFileChange = event => {
     setSelectedFile(event.target.files[0])
@@ -48,7 +49,7 @@ function UploadPage() {
 
   return (
     <div>
-      <h1>Upload File to S3</h1>
+      <h1 id={id}>Upload File to S3</h1>
       <input type="file" onChange={handleFileChange} />
       <button onClick={handleFileUpload}>Upload File</button>
     </div>

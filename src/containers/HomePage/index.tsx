@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { HTMLToPDF, ReactPDF, ReactPdfHook } from '../../components'
-import { useUndoableState } from '../../hooks'
+import { useUndoableState, useOnlineStatus } from '../../hooks'
 
 interface IProps {
   data?: any
@@ -9,6 +9,7 @@ interface IProps {
 const init = { text: 'The quick brown fox jumps over the lazy dog' }
 
 const HomePage: FC<IProps> = () => {
+  useOnlineStatus()
   const {
     state: doc,
     setState: setDoc,
