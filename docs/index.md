@@ -4,6 +4,9 @@
 ## Rendering
 - `Rendering` is anytime the function(Component) gets called which is sending you some instruction on creating a DOM
 - `Mounting` is when the component rendered for the first time i.e. react builds the DOM for this component for the first time.
+- Rendering refers to calculating what the next version of your UI should look like. After rendering, Effects are flushed (meaning they are run until there are no more left) and may update the calculation if the Effects have impacts on layout. React takes this new calculation and compares it to the calculation used to create the previous version of your UI, then commits just the minimum changes needed to the DOM (what your user actually sees) to catch it up to the latest version.
+
+
   
 ### Mounting
 - `Mounting` in React refers to the process by which a component is created and inserted into the DOM. 

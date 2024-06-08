@@ -23,14 +23,13 @@
 
 
 ## cypress
-- yarn cypress open
+- `yarn cypress open`
 
 ## References
 - https://react-typescript-cheatsheet.netlify.app/
 - https://www.typescriptlang.org/docs/handbook/
 - https://react.dev/learn/describing-the-ui
 - https://www.reactenlightenment.com/
-- https://javascript.info/
 - https://immerjs.github.io/immer/
 - https://www.conventionalcommits.org/en/v1.0.0/
 - https://www.youtube.com/watch?v=qTDnwmMF5q8
@@ -41,12 +40,6 @@
 - https://www.youtube.com/watch?v=y2UsQB3WSvo
 - https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML
 - https://headlessui.com/react/fieldset
-- How use state useEffect useRef (hooks) works ? React ecosystem Advanced concepts
-
-suspense
-
-create ctx vs use ctx
-useMemo vs memo
 
 ## OpenSource
 - https://github.com/taniarascia/takenote
