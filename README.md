@@ -21,11 +21,12 @@
 | `react-query`     | data fetching library     |
 | `eslint/prettier` | linting                   |
 
-
 ## cypress
+
 - `yarn cypress open`
 
 ## References
+
 - https://react-typescript-cheatsheet.netlify.app/
 - https://www.typescriptlang.org/docs/handbook/
 - https://react.dev/learn/describing-the-ui
@@ -42,6 +43,7 @@
 - https://headlessui.com/react/fieldset
 
 ## OpenSource
+
 - https://github.com/taniarascia/takenote
 - https://github.com/thedevs-network/kutt
 - https://github.com/getsentry/sentry
@@ -56,6 +58,7 @@
 - https://github.com/oldboyxx/jira_clone
 
 ## Best Pratices
+
 - Naming Conventions
 - Avoid the Use of the State as much as possible
 - Write DRY Code
